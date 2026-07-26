@@ -1,16 +1,76 @@
-# React + Vite
+# React Authentication Demo with localStorage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React project that demonstrates basic authentication using **localStorage**. This project is built for beginners to understand how client-side authentication works without using a backend.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- User Signup
+- User Login
+- Logout
+- Change/Reset Password
+- Store user data using localStorage
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- React Router DOM
+- JavaScript
+- localStorage
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+├── components/
+│   ├── Login.jsx
+│   ├── Signup.jsx
+│   └── Reset.jsx
+│
+├── pages/
+│   └── Home.jsx
+│
+├── App.jsx
+└── main.jsx
+```
+
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/react-auth-localstorage.git
+```
+
+### 2. Navigate to the project
+
+```bash
+cd react-auth-localstorage
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+## How It Works
+
+1. Create a new account using **Signup**.
+2. User information is stored in **localStorage**.
+3. Login using the registered email and password.
+4. After successful login, the user is redirected to the Home page.
+5. Users can update their password from the Reset Password page.
+6. Logout removes the current user session from localStorage.
+
+## Note
+
+This project is for **learning purposes only**.
+
+It uses **localStorage** to store user data, which is **not secure** for production applications. In real-world projects, authentication should be handled using a backend server, database, password hashing, and secure authentication methods such as JWT or sessions.
+
